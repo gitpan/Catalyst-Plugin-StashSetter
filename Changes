@@ -1,5 +1,8 @@
 Revision history for Perl extension Catalyst::Plugin::StashSetter.
 
+0.02  Wed Oct 19 22:25:54 2005
+	- little bit fixed documentation
+
 0.01  Wed Oct 19 17:25:54 2005
 	- original version; created by h2xs 1.23 with options
 		-X -A Catalyst::Plugin::StashSetter

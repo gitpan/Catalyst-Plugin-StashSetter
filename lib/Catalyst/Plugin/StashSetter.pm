@@ -2,7 +2,7 @@ package Catalyst::Plugin::StashSetter;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub set_stash {
     my $c = shift;
@@ -20,14 +20,20 @@ Catalyst::Plugin::StashSetter - stash setter for Catalyst
 
 =head1 SYNOPSIS
 
+    package MyApp;
+    use Catalyst qw/StashSetter/;
+    
+    package MyApp::C::MyController;
+
     sub my_action : Local {
         my ( $self, $c ) = @_;
         ...
 
         $c->set_stash(
-            template => 'my_action.html'
+            template => 'my_action.html',
             param1   => 'hoge',
             param2   => 'foo',
+            param3   => 'bar',
         );
     }
 
@@ -48,6 +54,7 @@ This is but a synonym of follows.
 
     $c->stash->{param1} = 'value1';
     $c->stash->{param2} = 'value2';
+    $c->stash->{param3} = 'value3';
 
 Repeating "$c->stash->" many times isn't DRY.
 
