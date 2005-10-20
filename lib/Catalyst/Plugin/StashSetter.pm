@@ -2,7 +2,7 @@ package Catalyst::Plugin::StashSetter;
 use strict;
 use warnings;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 sub set_stash {
     my $c = shift;
@@ -43,7 +43,7 @@ This module provides context with stash-setter.
 
     $c->set_stash( param => 'value' );
 
-    # you can also set multiple paramters at once.
+    # you can also set multiple parameters at a time.
     $c->set_stash(
         param1 => 'value1',
         param2 => 'value2',
